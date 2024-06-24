@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Botão</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            justify-content: center;
+            color: #fff;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio do Botão</h1>
+    <button onclick="boasVindas()">Boas-vindas, Usuário(a)!</button>
+    <button onclick="diaSemana()">Qual é o dia da semana?</button>
+    <button onclick="verificarNumero()">Escolha um número positivo ou negativo. Vou tentar acertar!</button>
+    <button onclick="informarNumero ()">Qual é o número que estou pensando?</button>
+    <button onclick="sistemaPontuacao()">Qual pontuação você merece?</button>
+
+    <script>
+            function boasVindas() {
+            let nomeUsuario = prompt("Por favor, insira seu nome:");
+            alert(`Bem-vindo(a), ${nomeUsuario}!`);
+        }
+
+        function diaSemana() {
+            let diaSemana = prompt("Qual é o dia da semana?");
+            if (diaSemana.toLowerCase() === "sábado" || diaSemana.toLowerCase() === "domingo") {
+                alert("Bom fim de semana!");
+            } else {
+                alert("Boa semana!");
+            }
+        }
+
+        function verificarNumero() {
+            let numero = prompt("Digite um número:");
+            if (numero >= 0) {
+                alert("O número é positivo.");
+            } else {
+                alert("O número é negativo.");
+            }
+        }
+
+        function informarNumero() {
+            let numero = prompt("Qual é o número que estou pensando?");
+            alert(`Errou feio, errou rude!`);
+        }
+
+        function sistemaPontuacao() {
+            let pontuacao = prompt("Digite a pontuação:");
+            if (pontuacao >= 100) {
+                alert("Parabéns, você venceu!");
+            } else {
+                alert("Tente novamente para ganhar.");
+            }
+        }
+    </script>
+</body>
+</html>
